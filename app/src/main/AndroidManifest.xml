@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.klhk.whalecomp">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/whale_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/whale_logo_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.WhaleComp">
+        <activity android:name=".WalletFragment.StratergyScreens.AutoCompoundActivity"></activity>
+        <activity android:name=".WalletFragment.StratergyScreens.AutoFarmActivity" />
+        <activity android:name=".WalletFragment.StratergyScreens.CompoundActivity" />
+        <activity android:name=".WalletFragment.StratergyScreens.MyStratergyActivity" />
+        <activity android:name=".DocFragment.DocActivity.Desc2Activity" />
+        <activity android:name=".DocFragment.DocActivity.DescActivity" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
