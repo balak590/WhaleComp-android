@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="10dp"
+    android:orientation="vertical">
+    <com.github.sshadkany.shapes.RoundRectView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:shape_roundRect_backgroundColor="@color/background_color"
+        app:shape_roundRect_bottomLeftRadius="10dp"
+        app:shape_roundRect_bottomRightRadius="10dp"
+        app:shape_roundRect_dark_color="@color/dark_shadow"
+        app:shape_roundRect_light_color="@color/dark_shadow"
+        app:shape_roundRect_radius="6dp"
+        app:shape_roundRect_shadow_position_x="8dp"
+        app:shape_roundRect_shadow_position_y="8dp"
+        app:shape_roundRect_shadow_type="drop_shadow"
+        app:shape_roundRect_topLeftRadius="10dp"
+        app:shape_roundRect_topRightRadius="10dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:translationY="-2dp"
+                    android:translationZ="2dp"
+                    android:src="@drawable/popup_top"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:translationZ="3dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="20dp"
+                        android:layout_marginTop="15dp"
+                        >
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="WhaleTrust錢包"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/sub_heading_text"
+                            android:textColor="@color/bg_color"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight=".9"/>
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="25dp"
+                            android:layout_weight=".1"
+                            android:layout_marginLeft="30dp"
+                            android:adjustViewBounds="true"
+                            android:id="@+id/closeButton"
+                            android:layout_gravity="center_vertical|right"
+                            android:src="@drawable/close_white"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/layoutWallet"
+                android:orientation="vertical">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="10dp"
+                    >
+                    <com.github.sshadkany.RectButton
+                        android:id="@+id/whaleTrustButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="75dp"
+                        android:layout_marginHorizontal="25dp"
+                        app:shape_roundRect_backgroundColor="@color/background_color"
+                        app:shape_roundRect_bottomLeftRadius="10dp"
+                        app:shape_roundRect_bottomRightRadius="10dp"
+                        app:shape_roundRect_dark_color="@color/dark_shadow"
+                        app:shape_roundRect_light_color="@color/light_shadow"
+                        app:shape_roundRect_radius="6dp"
+                        app:shape_roundRect_shadow_position_x="4dp"
+                        app:shape_roundRect_shadow_position_y="4dp"
+                        app:shape_roundRect_shadow_type="drop_shadow"
+                        app:shape_roundRect_topLeftRadius="10dp"
+                        app:shape_roundRect_topRightRadius="10dp">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginHorizontal="40dp"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="連接"
+                                android:paddingHorizontal="10dp"
+                                android:textSize="@dimen/normal_text"
+                                android:layout_weight=".8"
+                                android:gravity="center"
+                                android:layout_gravity="center_vertical"/>
+                        </LinearLayout>
+                    </com.github.sshadkany.RectButton>
+
+
+
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <WebView
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:visibility="gone"
+                android:id="@+id/webPageWalletConnect"
+                tools:ignore="WebViewLayout" />
+
+
+        </LinearLayout>
+    </com.github.sshadkany.shapes.RoundRectView>
+
+</LinearLayout>

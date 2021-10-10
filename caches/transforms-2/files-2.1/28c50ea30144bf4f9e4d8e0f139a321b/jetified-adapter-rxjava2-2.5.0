@@ -1,0 +1,13 @@
+retrofit2.adapter.rxjava2.BodyObservable
+retrofit2.adapter.rxjava2.BodyObservable$BodyObserver
+retrofit2.adapter.rxjava2.CallEnqueueObservable
+retrofit2.adapter.rxjava2.CallEnqueueObservable$CallCallback
+retrofit2.adapter.rxjava2.CallExecuteObservable
+retrofit2.adapter.rxjava2.CallExecuteObservable$CallDisposable
+retrofit2.adapter.rxjava2.HttpException
+retrofit2.adapter.rxjava2.Result
+retrofit2.adapter.rxjava2.ResultObservable
+retrofit2.adapter.rxjava2.ResultObservable$ResultObserver
+retrofit2.adapter.rxjava2.RxJava2CallAdapter
+retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
+retrofit2.adapter.rxjava2.package-info

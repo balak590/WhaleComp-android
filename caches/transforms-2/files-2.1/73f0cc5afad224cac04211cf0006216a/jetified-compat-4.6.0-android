@@ -1,0 +1,3 @@
+java.lang.SafeVarargs
+org.web3j.compat.BiFunction
+org.web3j.compat.Compat

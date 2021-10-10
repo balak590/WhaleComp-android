@@ -1,0 +1,5 @@
+io.grpc.protobuf.ProtoFileDescriptorSupplier
+io.grpc.protobuf.ProtoMethodDescriptorSupplier
+io.grpc.protobuf.ProtoServiceDescriptorSupplier
+io.grpc.protobuf.ProtoUtils
+io.grpc.protobuf.StatusProto

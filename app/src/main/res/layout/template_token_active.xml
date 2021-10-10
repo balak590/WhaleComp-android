@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:layout_centerInParent="true"
+            android:src="@drawable/whale_trust_list_card"/>
+<!--            android:src="@drawable/pass_setting_card_lg"/>-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:paddingHorizontal="15dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_weight=".1"
+                android:layout_height="25dp"
+                android:adjustViewBounds="true"
+                android:id="@+id/tokenImage"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight=".7"
+                android:layout_marginLeft="5dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="@dimen/normal_text"
+                android:id="@+id/tokenName"
+                android:layout_height="wrap_content"
+                />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_weight=".2"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:padding="9dp"
+                android:id="@+id/toggleToken"
+                android:src="@drawable/pass_toggle_on"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

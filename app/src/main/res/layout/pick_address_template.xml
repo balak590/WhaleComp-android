@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.github.sshadkany.shapes.RoundRectView
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        app:shape_roundRect_radius="6dp"
+        app:shape_roundRect_bottomLeftRadius="15dp"
+        app:shape_roundRect_bottomRightRadius="15dp"
+        app:shape_roundRect_topLeftRadius="15dp"
+        app:shape_roundRect_topRightRadius="15dp"
+        app:shape_roundRect_shadow_position_x="3dp"
+        app:shape_roundRect_shadow_position_y="3dp"
+        app:shape_roundRect_shadow_type="drop_shadow"
+        app:shape_roundRect_backgroundColor="@color/background_color"
+        app:shape_roundRect_light_color="@color/light_shadow"
+        app:shape_roundRect_dark_color="@color/dark_shadow">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center_vertical"
+            android:paddingHorizontal="30dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_weight=".1"
+                android:layout_height="25dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/wallet_round"/>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".8"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:textSize="@dimen/small_text"
+                    android:layout_marginLeft="5dp"
+                    android:textStyle="bold"
+                    android:id="@+id/accountName"
+                    android:layout_height="wrap_content"
+                    android:text="我的賬戶"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="@dimen/small_text"
+                    android:id="@+id/addressName"
+                    android:layout_height="wrap_content"
+                    android:text=""/>
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_weight=".1"
+                android:layout_height="25dp"
+                android:adjustViewBounds="true"
+                android:padding="3dp"
+                android:layout_margin="3dp"
+                android:id="@+id/bscSelected"
+                android:src="@drawable/round_unselected"/>
+
+        </LinearLayout>
+    </com.github.sshadkany.shapes.RoundRectView>
+
+
+    </RelativeLayout>

@@ -1,0 +1,4 @@
+net.jcip.annotations.GuardedBy
+net.jcip.annotations.Immutable
+net.jcip.annotations.NotThreadSafe
+net.jcip.annotations.ThreadSafe

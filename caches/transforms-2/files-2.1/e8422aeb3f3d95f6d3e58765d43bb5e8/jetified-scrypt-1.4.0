@@ -1,0 +1,14 @@
+com.lambdaworks.codec.Base64
+com.lambdaworks.crypto.PBKDF
+com.lambdaworks.crypto.SCrypt
+com.lambdaworks.crypto.SCryptUtil
+com.lambdaworks.jni.JarLibraryLoader
+com.lambdaworks.jni.JarLibraryLoader$1
+com.lambdaworks.jni.LibraryLoader
+com.lambdaworks.jni.LibraryLoaders
+com.lambdaworks.jni.NilLibraryLoader
+com.lambdaworks.jni.Platform
+com.lambdaworks.jni.Platform$Arch
+com.lambdaworks.jni.Platform$OS
+com.lambdaworks.jni.SysLibraryLoader
+com.lambdaworks.jni.UnsupportedPlatformException
