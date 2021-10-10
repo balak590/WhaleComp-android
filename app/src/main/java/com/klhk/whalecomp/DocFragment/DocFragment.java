@@ -1,8 +1,12 @@
 package com.klhk.whalecomp.DocFragment;
 
+import static android.app.Activity.RESULT_OK;
+
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -11,7 +15,10 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import com.klhk.whalecomp.DocFragment.DocActivity.DescActivity;
+import com.klhk.whalecomp.MainActivity;
 import com.klhk.whalecomp.R;
+
+import static com.klhk.whalecomp.utilities.Constants.setupUI;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -62,22 +69,38 @@ public class DocFragment extends Fragment {
         }
     }
 
-    ImageView eps_stake_doc;
+    ImageView eps_stake_doc,cake_stake_card;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_doc, container, false);
+        setupUI(view,getActivity());
         eps_stake_doc=view.findViewById(R.id.eps_stake_doc);
+        cake_stake_card = view.findViewById(R.id.cake_stake_card);
 
 
         eps_stake_doc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                startActivityForResult(new Intent(getContext(), DescActivity.class),4001);
+            }
+        });
+        cake_stake_card.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
                 startActivity(new Intent(getContext(), DescActivity.class));
             }
         });
         return  view;
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(requestCode==4001&&resultCode==RESULT_OK){
+            ((MainActivity)getActivity()).clickMyStrgsScreen();
+        }
     }
 }

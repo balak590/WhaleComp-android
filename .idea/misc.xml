@@ -1,6 +1,109 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="../../../../layout/custom_preview.xml" value="0.2717948717948718" />
+        <entry key="app/src/main/res/drawable/apy_prediction.xml" value="0.26153846153846155" />
+        <entry key="app/src/main/res/drawable/arrow_down.xml" value="0.26153846153846155" />
+        <entry key="app/src/main/res/drawable/arrow_right.xml" value="0.26153846153846155" />
+        <entry key="app/src/main/res/drawable/back_button.xml" value="0.26153846153846155" />
+        <entry key="app/src/main/res/drawable/background_color.xml" value="0.14322916666666666" />
+        <entry key="app/src/main/res/drawable/binance_home_button.xml" value="0.26153846153846155" />
+        <entry key="app/src/main/res/drawable/blue_button_xml.xml" value="0.26153846153846155" />
+        <entry key="app/src/main/res/drawable/blue_gradient.xml" value="0.26153846153846155" />
+        <entry key="app/src/main/res/drawable/button_selector_white.xml" value="0.26153846153846155" />
+        <entry key="app/src/main/res/drawable/close_button.xml" value="0.26153846153846155" />
+        <entry key="app/src/main/res/drawable/disabled_gradient.xml" value="0.26153846153846155" />
+        <entry key="app/src/main/res/drawable/finger_print_image.xml" value="0.26153846153846155" />
+        <entry key="app/src/main/res/drawable/green_gradient.xml" value="0.26153846153846155" />
+        <entry key="app/src/main/res/drawable/grey_gradient.xml" value="0.26153846153846155" />
+        <entry key="app/src/main/res/drawable/home_lock.xml" value="0.26153846153846155" />
+        <entry key="app/src/main/res/drawable/menu_close_button.xml" value="0.14322916666666666" />
+        <entry key="app/src/main/res/drawable/menu_open_button.xml" value="0.26153846153846155" />
+        <entry key="app/src/main/res/drawable/night_mode.xml" value="0.26153846153846155" />
+        <entry key="app/src/main/res/drawable/setting_clock.xml" value="0.26153846153846155" />
+        <entry key="app/src/main/res/drawable/setting_cube.xml" value="0.26153846153846155" />
+        <entry key="app/src/main/res/drawable/setting_key.xml" value="0.26153846153846155" />
+        <entry key="app/src/main/res/drawable/setting_lang.xml" value="0.26153846153846155" />
+        <entry key="app/src/main/res/drawable/setting_lock.xml" value="0.26153846153846155" />
+        <entry key="app/src/main/res/drawable/setting_msg.xml" value="0.26153846153846155" />
+        <entry key="app/src/main/res/drawable/setting_notification.xml" value="0.26153846153846155" />
+        <entry key="app/src/main/res/drawable/setting_qr.xml" value="0.26153846153846155" />
+        <entry key="app/src/main/res/drawable/setting_symbol.xml" value="0.26153846153846155" />
+        <entry key="app/src/main/res/drawable/setting_user_pin.xml" value="0.26153846153846155" />
+        <entry key="app/src/main/res/drawable/setting_wallet.xml" value="0.26153846153846155" />
+        <entry key="app/src/main/res/drawable/update_icon.xml" value="0.26153846153846155" />
+        <entry key="app/src/main/res/drawable/yellow_gradient.xml" value="0.26153846153846155" />
+        <entry key="app/src/main/res/layout/activity_account_qr.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_add_remove_token.xml" value="0.2361111111111111" />
+        <entry key="app/src/main/res/layout/activity_alert_setup.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_auth_management.xml" value="0.2361111111111111" />
+        <entry key="app/src/main/res/layout/activity_auto_compound.xml" value="0.12708333333333333" />
+        <entry key="app/src/main/res/layout/activity_auto_farm.xml" value="0.12708333333333333" />
+        <entry key="app/src/main/res/layout/activity_change_language.xml" value="0.2361111111111111" />
+        <entry key="app/src/main/res/layout/activity_change_smart_chain.xml" value="0.2361111111111111" />
+        <entry key="app/src/main/res/layout/activity_compound.xml" value="0.12708333333333333" />
+        <entry key="app/src/main/res/layout/activity_create_mnemonic.xml" value="0.2361111111111111" />
+        <entry key="app/src/main/res/layout/activity_custom_keypad.xml" value="0.2361111111111111" />
+        <entry key="app/src/main/res/layout/activity_default_slippage.xml" value="0.2361111111111111" />
+        <entry key="app/src/main/res/layout/activity_default_timeout.xml" value="0.2361111111111111" />
+        <entry key="app/src/main/res/layout/activity_desc.xml" value="0.2361111111111111" />
+        <entry key="app/src/main/res/layout/activity_desc2.xml" value="0.2361111111111111" />
+        <entry key="app/src/main/res/layout/activity_import_address.xml" value="0.2361111111111111" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.2361111111111111" />
+        <entry key="app/src/main/res/layout/activity_mnemonic_desc.xml" value="0.2361111111111111" />
+        <entry key="app/src/main/res/layout/activity_mnemonic_phrase.xml" value="0.2361111111111111" />
+        <entry key="app/src/main/res/layout/activity_my_stratergy.xml" value="0.12708333333333333" />
+        <entry key="app/src/main/res/layout/activity_new_token.xml" value="0.2361111111111111" />
+        <entry key="app/src/main/res/layout/activity_notification_managemnt.xml" value="0.2361111111111111" />
+        <entry key="app/src/main/res/layout/activity_pass_phrase.xml" value="0.2361111111111111" />
+        <entry key="app/src/main/res/layout/activity_pass_phrase_verify.xml" value="0.2361111111111111" />
+        <entry key="app/src/main/res/layout/activity_password_setting.xml" value="0.2361111111111111" />
+        <entry key="app/src/main/res/layout/activity_pick_address.xml" value="0.2361111111111111" />
+        <entry key="app/src/main/res/layout/activity_receive_funds.xml" value="0.2361111111111111" />
+        <entry key="app/src/main/res/layout/activity_scan.xml" value="0.2361111111111111" />
+        <entry key="app/src/main/res/layout/activity_send_to_address.xml" value="0.2361111111111111" />
+        <entry key="app/src/main/res/layout/activity_social_media.xml" value="0.2361111111111111" />
+        <entry key="app/src/main/res/layout/activity_strategy_info.xml" value="0.2361111111111111" />
+        <entry key="app/src/main/res/layout/activity_strategy_steps.xml" value="0.2361111111111111" />
+        <entry key="app/src/main/res/layout/activity_swap_whale_trust.xml" value="0.2361111111111111" />
+        <entry key="app/src/main/res/layout/activity_token_detail.xml" value="0.2361111111111111" />
+        <entry key="app/src/main/res/layout/activity_tx_confirm.xml" value="0.2361111111111111" />
+        <entry key="app/src/main/res/layout/activity_tx_detail.xml" value="0.2361111111111111" />
+        <entry key="app/src/main/res/layout/activity_tx_success.xml" value="0.2361111111111111" />
+        <entry key="app/src/main/res/layout/activity_update.xml" value="0.2361111111111111" />
+        <entry key="app/src/main/res/layout/activity_web_browser.xml" value="0.2361111111111111" />
+        <entry key="app/src/main/res/layout/ad_alert_clicked.xml" value="0.2361111111111111" />
+        <entry key="app/src/main/res/layout/address_alert.xml" value="0.2361111111111111" />
+        <entry key="app/src/main/res/layout/error_notification.xml" value="0.2361111111111111" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.2361111111111111" />
+        <entry key="app/src/main/res/layout/fragment_setting.xml" value="0.2361111111111111" />
+        <entry key="app/src/main/res/layout/fragment_wallet.xml" value="0.18581735134641647" />
+        <entry key="app/src/main/res/layout/fragment_whale_trust.xml" value="0.2361111111111111" />
+        <entry key="app/src/main/res/layout/individual_alerts.xml" value="0.2361111111111111" />
+        <entry key="app/src/main/res/layout/nav_header_main.xml" value="0.30212196056224355" />
+        <entry key="app/src/main/res/layout/new_token_template.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/password_notification.xml" value="0.2361111111111111" />
+        <entry key="app/src/main/res/layout/pick_add_address.xml" value="0.2361111111111111" />
+        <entry key="app/src/main/res/layout/pick_add_address_whaletrust_new.xml" value="0.2361111111111111" />
+        <entry key="app/src/main/res/layout/pick_address_template.xml" value="0.2361111111111111" />
+        <entry key="app/src/main/res/layout/pick_alert_frequency.xml" value="0.2361111111111111" />
+        <entry key="app/src/main/res/layout/pick_alert_type.xml" value="0.2361111111111111" />
+        <entry key="app/src/main/res/layout/pick_chain.xml" value="0.2361111111111111" />
+        <entry key="app/src/main/res/layout/pick_token.xml" value="0.2361111111111111" />
+        <entry key="app/src/main/res/layout/pick_token_swap.xml" value="0.2361111111111111" />
+        <entry key="app/src/main/res/layout/pick_wallet.xml" value="0.2361111111111111" />
+        <entry key="app/src/main/res/layout/set_lock_timeout.xml" value="0.12708333333333333" />
+        <entry key="app/src/main/res/layout/swap_notification.xml" value="0.2361111111111111" />
+        <entry key="app/src/main/res/layout/template_stake_item.xml" value="0.2361111111111111" />
+        <entry key="app/src/main/res/layout/tvl_item_details_layout.xml" value="0.2361111111111111" />
+        <entry key="app/src/main/res/layout/tx_list_layout.xml" value="0.12708333333333333" />
+        <entry key="app/src/main/res/layout/whale_trust_dialog.xml" value="0.25" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

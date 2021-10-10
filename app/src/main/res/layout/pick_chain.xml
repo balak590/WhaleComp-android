@@ -5,15 +5,24 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:padding="10dp"
     android:orientation="vertical">
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_margin="10dp"
-        app:cardCornerRadius="8dp"
-        app:cardBackgroundColor="@color/bg_color"
-        android:layout_height="wrap_content">
+    <com.github.sshadkany.shapes.RoundRectView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:shape_roundRect_backgroundColor="@color/background_color"
+        app:shape_roundRect_bottomLeftRadius="10dp"
+        app:shape_roundRect_bottomRightRadius="10dp"
+        app:shape_roundRect_dark_color="@color/dark_shadow"
+        app:shape_roundRect_light_color="@color/dark_shadow"
+        app:shape_roundRect_radius="6dp"
+        app:shape_roundRect_shadow_position_x="7dp"
+        app:shape_roundRect_shadow_position_y="7dp"
+        app:shape_roundRect_shadow_type="drop_shadow"
+        app:shape_roundRect_topLeftRadius="10dp"
+        app:shape_roundRect_topRightRadius="10dp">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:padding="20dp"
             android:orientation="vertical">
             <LinearLayout
                 android:layout_width="match_parent"
@@ -27,16 +36,34 @@
                     android:layout_height="wrap_content"
                     android:text="交換網絡"
                     android:textStyle="bold"
-                    android:textSize="20dp"
-                    android:layout_weight=".8"/>
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="20dp"
-                    android:layout_weight=".2"
-                    android:padding="1dp"
+                    android:textSize="@dimen/sub_heading_text"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight=".85"/>
+                <com.github.sshadkany.CircleButton
                     android:id="@+id/closeButton"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
                     android:layout_gravity="center_vertical|right"
-                    android:src="@drawable/close_button"/>
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:shape_circle_radius="4dp"
+                    app:shape_circle_shadow_position_y="4dp"
+                    app:shape_circle_shadow_position_x="4dp"
+                    app:shape_circle_dark_color="@color/dark_shadow"
+                    app:shape_circle_light_color="@color/light_shadow"
+                    app:shape_circle_borderColor="#ECF0F3"
+                    app:shape_circle_borderWidth="1dp"
+                    app:shape_circle_backgroundColor="@color/background_color"
+                    app:shape_circle_shadow_type="drop_shadow">
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/close_button"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        />
+                </com.github.sshadkany.CircleButton>
 
             </LinearLayout>
 
@@ -45,27 +72,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="30dp"
                 android:orientation="horizontal">
-                <RelativeLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:paddingHorizontal="10dp"
-                    android:layout_weight=".5">
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:adjustViewBounds="true"
-                        android:padding="20dp"
-                        android:id="@+id/ether_logo"
-                        android:src="@drawable/eth_logo"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Ethereum"
-                        android:textSize="18sp"
-                        android:layout_centerHorizontal="true"
-                        android:layout_alignBottom="@id/ether_logo"
-                        android:textStyle="bold"/>
-                </RelativeLayout>
+
                 <RelativeLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -82,15 +89,36 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="BSC"
-                        android:textSize="18sp"
+                        android:textSize="@dimen/normal_text"
                         android:layout_centerHorizontal="true"
                         android:layout_alignBottom="@id/bsc_logo"
+                        android:textStyle="bold"/>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="10dp"
+                    android:layout_weight=".5">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:padding="20dp"
+                        android:id="@+id/ether_logo"
+                        android:src="@drawable/etherium_disabled"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ethereum"
+                        android:textSize="@dimen/normal_text"
+                        android:layout_centerHorizontal="true"
+                        android:layout_alignBottom="@id/ether_logo"
                         android:textStyle="bold"/>
                 </RelativeLayout>
 
             </LinearLayout>
         </LinearLayout>
-    </androidx.cardview.widget.CardView>
+    </com.github.sshadkany.shapes.RoundRectView>
 
 
 </LinearLayout>

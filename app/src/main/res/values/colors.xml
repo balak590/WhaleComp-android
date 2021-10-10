@@ -10,5 +10,18 @@
     <color name="bg_color">#F4F6F9</color>
     <color name="line_color">#E0E5EA</color>
     <color name="text_color">#5E666D</color>
+    <color name="text_color_grey">#9098A1</color>
     <color name="text_color_blue">#4987FF</color>
+    <color name="text_color_grey_light">#B1B7BE</color>
+    <color name="red">#FF0000</color>
+
+    <color name="disabled_color">#909498</color>
+    <color name="background_color">#ECF0F3</color>
+    <color name="dark_shadow">#33000000</color>
+    <color name="light_shadow">#ffffff</color>
+
+    <color name="blue_background_color">#00cfff</color>
+    <color name="blue_dark_shadow">#0158FF</color>
+    <color name="blue_light_shadow">#01D1FF</color>
+    <color name="blue_shadow">#994CD4FF</color>
 </resources>

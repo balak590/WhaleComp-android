@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.github.sshadkany.RectButton
+        android:layout_width="match_parent"
+        android:id="@+id/alertTypeButton"
+        android:layout_height="60dp"
+        app:shape_roundRect_backgroundColor="@color/background_color"
+        app:shape_roundRect_bottomLeftRadius="10dp"
+        app:shape_roundRect_bottomRightRadius="10dp"
+        app:shape_roundRect_dark_color="@color/dark_shadow"
+        app:shape_roundRect_light_color="@color/light_shadow"
+        app:shape_roundRect_radius="2dp"
+        app:shape_roundRect_shadow_position_x="1dp"
+        app:shape_roundRect_shadow_position_y="1dp"
+        app:shape_roundRect_shadow_type="drop_shadow"
+        app:shape_roundRect_topLeftRadius="10dp"
+        app:shape_roundRect_topRightRadius="10dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:layout_marginHorizontal="15dp"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:layout_weight=".15"
+                android:id="@+id/iconSymbol"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:id="@+id/tokenSymbol"
+                android:textStyle="bold"
+                android:gravity="center_vertical"
+                android:textSize="@dimen/normal_text"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:layout_weight=".3"/>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:gravity="right"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight=".55">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/small_text"
+                    android:id="@+id/alertType"
+                    android:gravity="right"
+                    android:layout_marginRight="10dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:textSize="@dimen/small_text"
+                    android:id="@+id/percentText"/>
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+    </com.github.sshadkany.RectButton>
+
+
+
+</RelativeLayout>

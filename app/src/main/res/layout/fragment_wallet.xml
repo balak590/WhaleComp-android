@@ -4,480 +4,546 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".WalletFragment.WalletFragment">
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <ImageView
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:src="@drawable/doc_image"
+        android:adjustViewBounds="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"/>
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingHorizontal="20dp"
-            android:paddingTop="8dp"
-            android:layout_gravity="center_vertical"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
-            <ImageView
-                android:layout_width="26dp"
-                android:layout_height="26dp"
-                android:src="@drawable/wallet_symbol"/>
+            android:layout_height="match_parent"
+            android:id="@+id/noStrAvailable"
+            android:visibility="gone"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="當前縂净值"
-                android:textStyle="bold"
-                android:textSize="18sp"
-                android:layout_marginHorizontal="6dp"
-                android:textColor="@color/text_color"/>
-            <ImageView
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:src="@drawable/eye_button"/>
+                android:text="當前未應用任何策略"
+                android:textSize="@dimen/normal_text"
+                />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="10dp"
+                >
+
+                <ImageView
+                    android:id="@+id/navigateToStratergy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/blue_button_new" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:text="應用策略"
+                    android:textColor="@color/bg_color"
+                    android:textSize="@dimen/normal_text"
+                    android:textStyle="bold" />
+            </RelativeLayout>
         </LinearLayout>
-        <TextView
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="$1,000.00"
-            android:paddingHorizontal="20dp"
-            android:paddingBottom="5dp"
-            android:id="@+id/amountText"
-            android:textStyle="bold"
-            android:fontFamily="@font/alibaba_bold"
-            android:textSize="28sp"/>
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:src="@drawable/wallet_card"
-                android:adjustViewBounds="true"/>
+            android:orientation="vertical">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:orientation="vertical">
+                android:paddingHorizontal="20dp"
+                android:paddingTop="8dp"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:src="@drawable/wallet_symbol"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="當前縂净值"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/normal_text"
+                    android:layout_marginHorizontal="6dp"
+                    android:textColor="@color/text_color"/>
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/eye_button"/>
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="$ -"
+                android:paddingHorizontal="20dp"
+                android:paddingBottom="5dp"
+                android:id="@+id/amountText"
+                android:textStyle="bold"
+                android:fontFamily="@font/alibaba_bold"
+                android:textSize="@dimen/large_text"/>
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/wallet_card"
+                    android:adjustViewBounds="true"/>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:paddingHorizontal="15dp"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal">
-                    <ImageView
-                        android:layout_width="0dp"
-                        android:layout_height="25dp"
-                        android:layout_weight=".1"
-                        android:src="@drawable/eps_symbol"/>
+                    android:layout_centerInParent="true"
+                    android:orientation="vertical">
                     <LinearLayout
-                        android:layout_width="0dp"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_weight=".65"
-                        android:layout_gravity="center_vertical"
+                        android:paddingHorizontal="15dp"
                         android:gravity="center_vertical"
                         android:orientation="horizontal">
-                        <TextView
-                            android:layout_width="wrap_content"
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="25dp"
+                            android:layout_weight=".1"
+                            android:src="@drawable/cake_symbol"/>
+                        <LinearLayout
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:textSize="16sp"
-                            android:text="USD稳定EPS收益峰值策略"/>
-                        <RelativeLayout
-                            android:layout_width="35dp"
-                            android:layout_marginLeft="5dp"
-                            android:layout_height="wrap_content">
-                            <ImageView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:src="@drawable/green_box"
-                                android:scaleType="fitXY"
-                                android:layout_centerInParent="true"
-                                android:adjustViewBounds="true"/>
+                            android:layout_weight=".65"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="PR1"
-                                android:layout_centerInParent="true"
-                                android:fontFamily="@font/alibaba_bold"
-                                android:textColor="@color/bg_color"/>
-                        </RelativeLayout>
-                    </LinearLayout>
+                                android:textSize="@dimen/normal_text"
+                                android:text="USD雙池稳定收益峰值策略"/>
+                            <RelativeLayout
+                                android:layout_width="35dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_height="wrap_content">
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/green_box"
+                                    android:scaleType="fitXY"
+                                    android:layout_centerInParent="true"
+                                    android:adjustViewBounds="true"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="PR1"
+                                    android:textSize="@dimen/xsmall_text"
+                                    android:layout_centerInParent="true"
+                                    android:fontFamily="@font/alibaba_bold"
+                                    android:textColor="@color/bg_color"/>
+                            </RelativeLayout>
+                        </LinearLayout>
 
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:textAlignment="gravity"
+                            android:gravity="center_vertical"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".25">
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:src="@drawable/card_button1"
+                                android:adjustViewBounds="true"
+                                android:id="@+id/navigateMyStr"
+                                android:layout_centerInParent="true"
+                                android:layout_height="wrap_content"
+                                />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="詳情"
+                                android:textSize="@dimen/small_text"
+                                android:fontFamily="@font/alibaba_bold"
+                                android:textStyle="bold"
+                                android:layout_centerInParent="true"
+                                android:gravity="center"
+                                android:textColor="@color/text_color_blue"/>
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
                     <RelativeLayout
-                        android:layout_width="0dp"
-                        android:textAlignment="gravity"
-                        android:gravity="center_vertical"
-                        android:layout_gravity="center_vertical"
-                        android:layout_height="wrap_content"
-                        android:layout_weight=".25">
+                        android:layout_width="match_parent"
+                        android:paddingHorizontal="25dp"
+                        android:layout_marginVertical="5dp"
+                        android:layout_height="wrap_content">
                         <ImageView
                             android:layout_width="match_parent"
-                            android:src="@drawable/card_button1"
-                            android:adjustViewBounds="true"
-                            android:id="@+id/navigateMyStr"
-                            android:layout_centerInParent="true"
                             android:layout_height="wrap_content"
-                            />
-                        <TextView
+                            android:src="@drawable/wallet_input"
+                            android:adjustViewBounds="true"/>
+                        <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="詳情"
-                            android:fontFamily="@font/alibaba_bold"
-                            android:textStyle="bold"
-                            android:layout_centerInParent="true"
-                            android:gravity="center"
-                            android:textColor="@color/text_color_blue"/>
+                            android:layout_centerVertical="true"
+                            android:paddingHorizontal="20dp"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="净值"
+                                android:textSize="@dimen/normal_text"/>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="$500.00"
+                                android:id="@+id/editText1"
+                                android:fontFamily="@font/alibaba_bold"
+                                android:layout_marginLeft="14dp"
+                                android:textStyle="bold"
+                                android:textSize="@dimen/heading_text"/>
+                        </LinearLayout>
+
                     </RelativeLayout>
-
-
-                </LinearLayout>
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:paddingHorizontal="25dp"
-                    android:layout_marginVertical="5dp"
-                    android:layout_height="wrap_content">
-                    <ImageView
+                    <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/wallet_input"
-                        android:adjustViewBounds="true"/>
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_centerVertical="true"
-                        android:paddingHorizontal="20dp"
-                        android:orientation="horizontal">
-                        <TextView
-                            android:layout_width="wrap_content"
+                        android:paddingHorizontal="10dp"
+                        >
+                        <ImageView
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="净值"
-                            android:textStyle="bold"
-                            android:textSize="19dp"/>
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/grey_square_button"/>
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="$500.00"
-                            android:id="@+id/editText1"
-                            android:fontFamily="@font/alibaba_bold"
-                            android:layout_marginLeft="14dp"
+                            android:layout_centerInParent="true"
+                            android:text="剩餘 2小時30分鐘"
+                            android:textColor="@color/bg_color"
+                            android:gravity="center"
                             android:textStyle="bold"
-                            android:textSize="22dp"/>
-                    </LinearLayout>
+                            android:textSize="@dimen/normal_text"/>
+                    </RelativeLayout>
+                </LinearLayout>
 
-                </RelativeLayout>
-                <RelativeLayout
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:id="@+id/epsStrategy"
+                android:visibility="gone"
+                android:layout_height="wrap_content">
+                <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:paddingHorizontal="10dp"
-                    >
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:adjustViewBounds="true"
-                        android:src="@drawable/grey_square_button"/>
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_centerInParent="true"
-                        android:text="剩餘 2小時30分鐘"
-                        android:textColor="@color/bg_color"
-                        android:gravity="center"
-                        android:textStyle="bold"
-                        android:textSize="16dp"/>
-                </RelativeLayout>
-            </LinearLayout>
-
-        </RelativeLayout>
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:src="@drawable/wallet_card"
-                android:adjustViewBounds="true"/>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:orientation="vertical">
+                    android:src="@drawable/wallet_card"
+                    android:adjustViewBounds="true"/>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:paddingHorizontal="15dp"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal">
-                    <ImageView
-                        android:layout_width="0dp"
-                        android:layout_height="25dp"
-                        android:layout_weight=".1"
-                        android:src="@drawable/cake_symbol"/>
+                    android:layout_centerInParent="true"
+                    android:orientation="vertical">
                     <LinearLayout
-                        android:layout_width="0dp"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_weight=".65"
-                        android:layout_gravity="center_vertical"
+                        android:paddingHorizontal="15dp"
                         android:gravity="center_vertical"
                         android:orientation="horizontal">
-                        <TextView
-                            android:layout_width="wrap_content"
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="25dp"
+                            android:layout_weight=".1"
+                            android:src="@drawable/eps_symbol"/>
+                        <LinearLayout
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:textSize="16sp"
-                            android:text="USD稳定BUNNY滚存策略"/>
-                        <RelativeLayout
-                            android:layout_width="35dp"
-                            android:layout_marginLeft="5dp"
-                            android:layout_height="wrap_content">
-                            <ImageView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:src="@drawable/green_box"
-                                android:scaleType="fitXY"
-                                android:layout_centerInParent="true"
-                                android:adjustViewBounds="true"/>
+                            android:layout_weight=".65"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="PR1"
-                                android:layout_centerInParent="true"
-                                android:fontFamily="@font/alibaba_bold"
-                                android:textColor="@color/bg_color"/>
-                        </RelativeLayout>
-                    </LinearLayout>
+                                android:textSize="@dimen/normal_text"
+                                android:text="EPS收益峰值策略"/>
+                            <RelativeLayout
+                                android:layout_width="35dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_height="wrap_content">
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/green_box"
+                                    android:scaleType="fitXY"
+                                    android:layout_centerInParent="true"
+                                    android:adjustViewBounds="true"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="PR3"
+                                    android:textSize="@dimen/xsmall_text"
+                                    android:layout_centerInParent="true"
+                                    android:fontFamily="@font/alibaba_bold"
+                                    android:textColor="@color/bg_color"/>
+                            </RelativeLayout>
+                        </LinearLayout>
 
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:textAlignment="gravity"
+                            android:gravity="center_vertical"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".25">
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:src="@drawable/card_button1"
+                                android:adjustViewBounds="true"
+                                android:layout_centerInParent="true"
+                                android:layout_height="wrap_content"
+                                />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="詳情"
+                                android:id="@+id/strInfoButton"
+                                android:textSize="@dimen/small_text"
+                                android:fontFamily="@font/alibaba_bold"
+                                android:textStyle="bold"
+                                android:layout_centerInParent="true"
+                                android:gravity="center"
+                                android:textColor="@color/text_color_blue"/>
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
                     <RelativeLayout
-                        android:layout_width="0dp"
-                        android:textAlignment="gravity"
-                        android:gravity="center_vertical"
-                        android:layout_gravity="center_vertical"
-                        android:layout_height="wrap_content"
-                        android:layout_weight=".25">
+                        android:layout_width="match_parent"
+                        android:paddingHorizontal="25dp"
+                        android:layout_marginVertical="5dp"
+                        android:layout_height="wrap_content">
                         <ImageView
                             android:layout_width="match_parent"
-                            android:src="@drawable/card_button1"
-                            android:adjustViewBounds="true"
-                            android:layout_centerInParent="true"
                             android:layout_height="wrap_content"
-                            />
+                            android:src="@drawable/wallet_input"
+                            android:adjustViewBounds="true"/>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:paddingHorizontal="20dp"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="净值"
+                                android:textSize="@dimen/normal_text"/>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="$0.00"
+                                android:id="@+id/editText2"
+                                android:background="@null"
+                                android:layout_marginLeft="14dp"
+                                android:fontFamily="@font/alibaba_bold"
+                                android:textStyle="bold"
+                                android:textSize="@dimen/heading_text"/>
+                        </LinearLayout>
+
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="10dp"
+                        >
+
+                        <ImageView
+                            android:id="@+id/navigateCompound"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/blue_button_new" />
+
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="詳情"
-                            android:fontFamily="@font/alibaba_bold"
-                            android:textStyle="bold"
                             android:layout_centerInParent="true"
                             android:gravity="center"
-                            android:textColor="@color/text_color_blue"/>
+                            android:text="一鍵優化"
+                            android:textColor="@color/bg_color"
+                            android:textSize="@dimen/normal_text"
+                            android:textStyle="bold" />
                     </RelativeLayout>
-
-
                 </LinearLayout>
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:paddingHorizontal="25dp"
-                    android:layout_marginVertical="5dp"
-                    android:layout_height="wrap_content">
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/wallet_input"
-                        android:adjustViewBounds="true"/>
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_centerVertical="true"
-                        android:paddingHorizontal="20dp"
-                        android:orientation="horizontal">
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="净值"
-                            android:textStyle="bold"
-                            android:textSize="19dp"/>
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="$500.00"
-                            android:id="@+id/editText2"
-                            android:background="@null"
-                            android:layout_marginLeft="14dp"
-                            android:fontFamily="@font/alibaba_bold"
-                            android:textStyle="bold"
-                            android:textSize="22dp"/>
-                    </LinearLayout>
 
-                </RelativeLayout>
-                <RelativeLayout
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:layout_height="wrap_content">
+                <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:paddingHorizontal="10dp"
-                    >
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:adjustViewBounds="true"
-                        android:id="@+id/navigateCompound"
-                        android:src="@drawable/blue_square_button"/>
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_centerInParent="true"
-                        android:text="一鍵優化"
-                        android:textColor="@color/bg_color"
-                        android:gravity="center"
-                        android:textStyle="bold"
-                        android:textSize="16dp"/>
-                </RelativeLayout>
-            </LinearLayout>
-
-        </RelativeLayout>
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:src="@drawable/wallet_card"
-                android:adjustViewBounds="true"/>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:orientation="vertical">
+                    android:src="@drawable/wallet_card"
+                    android:adjustViewBounds="true"/>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:paddingHorizontal="15dp"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal">
-                    <ImageView
-                        android:layout_width="0dp"
-                        android:layout_height="25dp"
-                        android:layout_weight=".1"
-                        android:src="@drawable/auto_farm"/>
+                    android:layout_centerInParent="true"
+                    android:orientation="vertical">
                     <LinearLayout
-                        android:layout_width="0dp"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_weight=".65"
-                        android:layout_gravity="center_vertical"
+                        android:paddingHorizontal="15dp"
                         android:gravity="center_vertical"
                         android:orientation="horizontal">
-                        <TextView
-                            android:layout_width="wrap_content"
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="25dp"
+                            android:layout_weight=".1"
+                            android:src="@drawable/cake_symbol"/>
+                        <LinearLayout
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:textSize="16sp"
-                            android:text="USD稳定AUTO滚存策略"/>
-                        <RelativeLayout
-                            android:layout_width="35dp"
-                            android:layout_marginLeft="5dp"
-                            android:layout_height="wrap_content">
-                            <ImageView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:src="@drawable/green_box"
-                                android:scaleType="fitXY"
-                                android:layout_centerInParent="true"
-                                android:adjustViewBounds="true"/>
+                            android:layout_weight=".65"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="PR1"
-                                android:layout_centerInParent="true"
-                                android:fontFamily="@font/alibaba_bold"
-                                android:textColor="@color/bg_color"/>
-                        </RelativeLayout>
-                    </LinearLayout>
+                                android:textSize="@dimen/normal_text"
+                                android:text="USD雙池稳定收益峰值策略"/>
+                            <RelativeLayout
+                                android:layout_width="35dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_height="wrap_content">
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/green_box"
+                                    android:scaleType="fitXY"
+                                    android:layout_centerInParent="true"
+                                    android:adjustViewBounds="true"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="PR1"
+                                    android:textSize="@dimen/xsmall_text"
+                                    android:layout_centerInParent="true"
+                                    android:fontFamily="@font/alibaba_bold"
+                                    android:textColor="@color/bg_color"/>
+                            </RelativeLayout>
+                        </LinearLayout>
 
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:textAlignment="gravity"
+                            android:gravity="center_vertical"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".25">
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:src="@drawable/card_button1"
+                                android:adjustViewBounds="true"
+                                android:layout_centerInParent="true"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/navigateAuto"
+                                />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="詳情"
+                                android:textSize="@dimen/small_text"
+                                android:fontFamily="@font/alibaba_bold"
+                                android:textStyle="bold"
+                                android:layout_centerInParent="true"
+                                android:gravity="center"
+                                android:textColor="@color/text_color_blue"/>
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
                     <RelativeLayout
-                        android:layout_width="0dp"
-                        android:textAlignment="gravity"
-                        android:gravity="center_vertical"
-                        android:layout_gravity="center_vertical"
-                        android:layout_height="wrap_content"
-                        android:layout_weight=".25">
+                        android:layout_width="match_parent"
+                        android:paddingHorizontal="25dp"
+                        android:layout_marginVertical="5dp"
+                        android:layout_height="wrap_content">
                         <ImageView
                             android:layout_width="match_parent"
-                            android:src="@drawable/card_button1"
-                            android:adjustViewBounds="true"
-                            android:layout_centerInParent="true"
                             android:layout_height="wrap_content"
-                            android:id="@+id/navigateAuto"
-                            />
-                        <TextView
+                            android:src="@drawable/wallet_input"
+                            android:adjustViewBounds="true"/>
+                        <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="詳情"
-                            android:fontFamily="@font/alibaba_bold"
-                            android:textStyle="bold"
-                            android:layout_centerInParent="true"
-                            android:gravity="center"
-                            android:textColor="@color/text_color_blue"/>
+                            android:layout_centerVertical="true"
+                            android:paddingHorizontal="20dp"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="净值"
+                                android:textSize="@dimen/normal_text"/>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="$500.00"
+                                android:id="@+id/editText3"
+                                android:background="@null"
+                                android:layout_marginLeft="14dp"
+                                android:textStyle="bold"
+                                android:fontFamily="@font/alibaba_bold"
+                                android:textSize="@dimen/heading_text"/>
+                        </LinearLayout>
+
                     </RelativeLayout>
-
-
-                </LinearLayout>
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:paddingHorizontal="25dp"
-                    android:layout_marginVertical="5dp"
-                    android:layout_height="wrap_content">
-                    <ImageView
+                    <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/wallet_input"
-                        android:adjustViewBounds="true"/>
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_centerVertical="true"
-                        android:paddingHorizontal="20dp"
-                        android:orientation="horizontal">
-                        <TextView
-                            android:layout_width="wrap_content"
+                        android:paddingHorizontal="10dp"
+                        >
+                        <ImageView
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="净值"
-                            android:textStyle="bold"
-                            android:textSize="19dp"/>
+                            android:adjustViewBounds="true"
+                            android:id="@+id/navigateAutoCompound"
+                            android:src="@drawable/blue_square_button"/>
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="$500.00"
-                            android:id="@+id/editText3"
-                            android:background="@null"
-                            android:layout_marginLeft="14dp"
+                            android:layout_centerInParent="true"
+                            android:text="剩餘 2小時30分鐘"
+                            android:textColor="@color/bg_color"
+                            android:gravity="center"
                             android:textStyle="bold"
-                            android:fontFamily="@font/alibaba_bold"
-                            android:textSize="22dp"/>
-                    </LinearLayout>
+                            android:textSize="@dimen/normal_text"/>
+                    </RelativeLayout>
+                </LinearLayout>
 
-                </RelativeLayout>
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:paddingHorizontal="10dp"
-                    >
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:adjustViewBounds="true"
-                        android:id="@+id/navigateAutoCompound"
-                        android:src="@drawable/blue_square_button"/>
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_centerInParent="true"
-                        android:text="剩餘 2小時30分鐘"
-                        android:textColor="@color/bg_color"
-                        android:gravity="center"
-                        android:textStyle="bold"
-                        android:textSize="16dp"/>
-                </RelativeLayout>
-            </LinearLayout>
-
-        </RelativeLayout>
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="100dp"/>
+            </RelativeLayout>
 
 
-    </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+    </RelativeLayout>
+
 
 </FrameLayout>

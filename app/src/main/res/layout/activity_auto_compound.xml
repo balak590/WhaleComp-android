@@ -14,50 +14,98 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginHorizontal="10dp"
-        android:layout_marginTop="10dp"
         >
-        <ImageView
-            android:layout_width="0dp"
-            android:layout_height="50dp"
+        <com.github.sshadkany.shapes.CircleView
             android:id="@+id/backButton"
-            android:src="@drawable/back_button"
-            android:layout_weight=".15"/>
-        <ImageView
-            android:layout_width="0dp"
-            android:layout_height="50dp"
-            android:src="@drawable/night_symbol"
-            android:layout_weight=".15"/>
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="10dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shape_circle_radius="4dp"
+            app:shape_circle_shadow_position_y="4dp"
+            app:shape_circle_shadow_position_x="4dp"
+            app:shape_circle_dark_color="@color/dark_shadow"
+            app:shape_circle_light_color="@color/light_shadow"
+            app:shape_circle_borderColor="#ECF0F3"
+            app:shape_circle_borderWidth="1dp"
+            app:shape_circle_backgroundColor="@color/background_color"
+            app:shape_circle_shadow_type="drop_shadow">
+            <ImageView
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:layout_gravity="center"
+                android:src="@drawable/back_button"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+        </com.github.sshadkany.shapes.CircleView>
+
         <View
             android:layout_width="0dp"
             android:layout_height="50dp"
-            android:layout_weight=".2"/>
+            android:layout_gravity="center_vertical"
+            android:layout_weight=".1"/>
         <LinearLayout
             android:layout_width="0dp"
-            android:layout_height="50dp"
-            android:layout_weight=".5"
+            android:layout_height="70dp"
+            android:layout_weight=".6"
+            android:layout_gravity="center_vertical"
             android:orientation="horizontal">
 
 
             <ImageView
                 android:layout_width="50dp"
                 android:layout_height="50dp"
+                android:layout_gravity="center_vertical"
                 android:id="@+id/pick_chain"
-                android:src="@drawable/eth_symbol"
+                android:src="@drawable/bsc_symbol"
                 />
             <RelativeLayout
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:id="@+id/connectButton"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
                 >
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:src="@drawable/round_button"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="鏈接錢包"
-                    android:gravity="center"/>
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:visibility="visible"
+                    android:id="@+id/connectButton"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/round_button"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="鏈接錢包"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:visibility="gone"
+                    android:id="@+id/addressActivated"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY"
+                        android:layout_centerInParent="true"
+                        android:layout_height="70dp"
+                        android:src="@drawable/whale_comp_address"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0x1234..5678"
+                        android:id="@+id/addressText"
+                        android:textSize="11dp"
+                        android:layout_marginLeft="25dp"
+                        android:gravity="center_vertical"
+                        android:layout_centerVertical="true"/>
+                </RelativeLayout>
             </RelativeLayout>
         </LinearLayout>
     </LinearLayout>
@@ -114,7 +162,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="當前預期年化收益"
+            android:text="@string/current_expected_annual_return"
             android:visibility="visible"
             android:paddingHorizontal="20dp"
             android:layout_marginTop="10dp"
@@ -132,7 +180,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="當前預期年化收益"
+            android:text="@string/current_expected_annual_return"
             android:paddingHorizontal="20dp"
             android:layout_marginTop="10dp"
             android:textSize="18sp"/>
@@ -232,7 +280,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="使用優化策略"
+                                android:text="@string/use_optimized_stratergy"
                                 android:textColor="@color/bg_color"
                                 android:textSize="17sp"
                                 android:fontFamily="@font/alibaba_bold"
@@ -308,7 +356,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="未使用優化策略"
+                                android:text="@string/no_optimized_stratergy"
                                 android:textColor="@color/bg_color"
                                 android:textSize="17sp"
                                 android:fontFamily="@font/alibaba_bold"
@@ -330,7 +378,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="年化收益"
+                        android:text="@string/annual_income"
                         android:layout_marginLeft="10dp"
                         android:textSize="19sp"
                         android:textStyle="bold"/>
@@ -428,7 +476,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:text="開啓優化策略"
+                android:text="@string/open_optimized_stratergy"
                 android:textColor="@color/bg_color"
                 android:gravity="center"
                 android:textStyle="bold"

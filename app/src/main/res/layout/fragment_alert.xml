@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:showIn="@layout/activity_main"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/bg_color"
+            android:layout_alignParentBottom="true"
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="25dp"
+                android:paddingVertical="5dp"
+                >
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_centerInParent="true"
+                    android:layout_height="70dp"
+                    android:id="@+id/addButton"
+                    android:src="@drawable/plus"
+                    android:adjustViewBounds="true"/>
+            </RelativeLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginHorizontal="15dp"
+                android:fontFamily="@font/alibaba_bold"
+                android:textSize="@dimen/heading_text"
+                android:textColor="@color/black"
+                android:layout_marginTop="5dp"
+                android:id="@+id/title"
+                android:textStyle="bold"
+                android:text="價格提醒" />
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbars="none"
+                    android:id="@+id/scrollView"
+                    >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:id="@+id/alertItems"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                    </LinearLayout>
+                </ScrollView>
+
+
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:id="@+id/noAlertsText"
+            android:visibility="gone"
+            android:textSize="@dimen/normal_text"
+            android:text="您還沒有設置提醒"/>
+    </RelativeLayout>
+
+
+</FrameLayout>

@@ -37,6 +37,7 @@
         android:text="交易正在確認中，请耐心等待 (1/12)"
         android:layout_below="@id/image"
         android:textSize="17sp"
+        android:visibility="gone"
         android:textColor="@color/bg_color"
         android:fontFamily="@font/alibaba_bold"
         android:layout_centerHorizontal="true"

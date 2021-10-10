@@ -5,62 +5,31 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".DocFragment.DocActivity.Desc2Activity">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:id="@+id/topBar"
+    <com.github.sshadkany.shapes.CircleView
+        android:id="@+id/backButton"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_margin="10dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginHorizontal="10dp"
-        android:layout_marginTop="10dp"
-        >
+        app:shape_circle_radius="4dp"
+        app:shape_circle_shadow_position_y="4dp"
+        app:shape_circle_shadow_position_x="4dp"
+        app:shape_circle_dark_color="@color/dark_shadow"
+        app:shape_circle_light_color="@color/light_shadow"
+        app:shape_circle_borderColor="#ECF0F3"
+        app:shape_circle_borderWidth="1dp"
+        app:shape_circle_backgroundColor="@color/background_color"
+        app:shape_circle_shadow_type="drop_shadow">
         <ImageView
-            android:layout_width="0dp"
-            android:layout_height="50dp"
-            android:id="@+id/backButton"
+            android:layout_width="23dp"
+            android:layout_height="23dp"
+            android:layout_gravity="center"
             android:src="@drawable/back_button"
-            android:layout_weight=".15"/>
-        <ImageView
-            android:layout_width="0dp"
-            android:layout_height="50dp"
-            android:src="@drawable/night_symbol"
-            android:layout_weight=".15"/>
-        <View
-            android:layout_width="0dp"
-            android:layout_height="50dp"
-            android:layout_weight=".2"/>
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="50dp"
-            android:layout_weight=".5"
-            android:orientation="horizontal">
-
-
-            <ImageView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:id="@+id/pick_chain"
-                android:src="@drawable/eth_symbol"
-                />
-            <RelativeLayout
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:id="@+id/connectButton"
-                >
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:src="@drawable/round_button"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="鏈接錢包"
-                    android:gravity="center"/>
-            </RelativeLayout>
-        </LinearLayout>
-    </LinearLayout>
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+    </com.github.sshadkany.shapes.CircleView>
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -68,7 +37,7 @@
         android:scrollbars="none"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/topBar">
+        app:layout_constraintTop_toBottomOf="@id/backButton">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -78,17 +47,20 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
-                android:gravity="center"
+                android:gravity="left|center_vertical"
+                android:layout_marginLeft="20dp"
                 android:orientation="horizontal">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="23sp"
+                    android:textSize="@dimen/heading_text"
                     android:textStyle="bold"
                     android:textColor="@color/black"
-                    android:text="USD稳定EPS收益峰值策略"/>
+                    android:text="EPS收益峰值策略"/>
                 <RelativeLayout
                     android:layout_width="39dp"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
                     android:layout_marginLeft="5dp"
                     android:layout_height="wrap_content">
                     <ImageView
@@ -101,7 +73,8 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="PR1"
+                        android:text="PR3"
+                        android:textSize="@dimen/xsmall_text"
                         android:layout_centerInParent="true"
                         android:fontFamily="@font/alibaba_bold"
                         android:textColor="@color/bg_color"/>
@@ -121,15 +94,36 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:layout_centerInParent="true">
-                    <TextView
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/alibaba_bold"
-                        android:textSize="20sp"
-                        android:textColor="#5E666D"
                         android:paddingHorizontal="25dp"
-                        android:text="使用本策略所管理的投資本金"
-                        />
+                        android:layout_marginBottom="5dp"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight=".5"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/alibaba_bold"
+                            android:textSize="@dimen/normal_text"
+                            android:textColor="#5E666D"
+                            android:text="使用當前策略投資"
+                            />
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight=".5"
+                            android:layout_marginRight="20dp"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/alibaba_bold"
+                            android:textSize="@dimen/normal_text"
+                            android:id="@+id/tokenBalance"
+                            android:textColor="#5E666D"
+                            android:text="餘額:0.0000"
+                            android:gravity="right"
+                            android:layout_gravity="right"
+                            />
+                    </LinearLayout>
+
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -191,6 +185,9 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:hint="輸入金額"
+                                android:id="@+id/tokenEntered"
+                                android:digits="0123456789."
+                                android:inputType="phone"
                                 android:background="@null"
                                 android:layout_marginHorizontal="25dp"
                                 android:layout_centerVertical="true"/>
@@ -224,18 +221,18 @@
                                 android:visibility="visible"
                                 android:orientation="horizontal">
                                 <ImageView
-                                    android:layout_width="20dp"
-                                    android:layout_height="20dp"
-                                    android:src="@drawable/usdt_token"
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:src="@drawable/eps_symbol"
                                     android:gravity="center_vertical"
                                     android:id="@+id/token1Img"
                                     android:layout_gravity="center_vertical"/>
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="USDT"
-                                    android:layout_marginLeft="5dp"
-                                    android:textSize="18sp"
+                                    android:text="EPS"
+                                    android:textStyle="bold"
+                                    android:textSize="@dimen/normal_text"
                                     android:id="@+id/token1Text"
                                     android:gravity="center_vertical"
                                     android:layout_gravity="center_vertical"/>
@@ -247,6 +244,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:paddingHorizontal="25dp"
+                        android:visibility="gone"
                         android:orientation="horizontal">
                         <TextView
                             android:layout_width="wrap_content"
@@ -270,7 +268,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:paddingHorizontal="25dp"
-                        android:layout_marginVertical="5dp"
+                        android:layout_marginTop="12dp"
                         >
                         <ImageView
                             android:layout_width="match_parent"
@@ -306,26 +304,23 @@
                                 android:text="優化策略"
                                 android:layout_marginLeft="10dp"
                                 android:fontFamily="@font/alibaba_bold"
-                                android:textSize="18sp"
+                                android:textSize="@dimen/normal_text"
                                 />
                             <RelativeLayout
                                 android:layout_width="wrap_content"
                                 android:paddingVertical="9dp"
                                 android:layout_marginRight="5dp"
                                 android:layout_height="60dp">
+
+
                                 <ImageView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:padding="8dp"
-                                    android:src="@drawable/slider_yellow"
+                                    android:padding="4dp"
                                     android:layout_alignParentRight="true"
-                                    android:adjustViewBounds="true"/>
-                                <ImageView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:src="@drawable/slider_button"
-                                    android:layout_alignParentRight="true"
-                                    android:adjustViewBounds="true"/>
+                                    android:adjustViewBounds="true"
+                                    android:id="@+id/sliderButton"
+                                    android:src="@drawable/toggle_on" />
                             </RelativeLayout>
                         </LinearLayout>
 
@@ -368,16 +363,16 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="7dp"
                         android:textColor="#5E666D"
-                        android:fontFamily="@font/alibaba_bold"
+                        android:textStyle="bold"
                         android:text="策略使用規則"
-                        android:textSize="20sp" />
+                        android:textSize="@dimen/normal_text" />
                 </LinearLayout>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingHorizontal="20dp"
                     android:text="@string/desc_text"
-                    android:textSize="16sp" />
+                    android:textSize="@dimen/normal_text" />
                 </LinearLayout>
             </RelativeLayout>
 
@@ -411,6 +406,7 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:id="@+id/continueButton"
                 android:src="@drawable/blue_square_button"
                 android:adjustViewBounds="true"/>
             <TextView

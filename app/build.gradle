@@ -1,10 +1,10 @@
-plugins {
-    id 'com.android.application'
-}
+apply plugin: 'com.android.application'
+
 
 android {
     compileSdkVersion 30
     buildToolsVersion "30.0.3"
+
 
     defaultConfig {
         applicationId "com.klhk.whalecomp"
@@ -12,8 +12,10 @@ android {
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
-
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    dexOptions {
+        javaMaxHeapSize "4g"
     }
 
     buildTypes {
@@ -26,6 +28,15 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+
+
+    packagingOptions {
+        exclude 'lib/x86_64/darwin/libscrypt.dylib'
+        exclude 'lib/x86_64/freebsd/libscrypt.so'
+        exclude 'lib/x86_64/linux/libscrypt.so'
+    }
+
+
 }
 
 dependencies {
@@ -37,4 +48,51 @@ dependencies {
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+//    implementation platform('com.google.firebase:firebase-bom:28.1.0')
+//    implementation 'com.google.firebase:firebase-analytics'
+//    implementation 'com.google.firebase:firebase-messaging'
+    implementation 'com.android.volley:volley:1.1.0'
+    implementation project(path: ':neumorphism')
+//    implementation ('io.socket:socket.io-client:2.0.0') {
+//        exclude group: 'org.json', module: 'json'
+//    }
+    implementation 'com.android.support:multidex:1.0.3'
+
+    //Qr code generator
+    implementation 'androidmads.library.qrgenearator:QRGenearator:1.0.4'
+    implementation 'com.google.zxing:core:3.3.2'
+    implementation('me.dm7.barcodescanner:zxing:1.9') {
+        exclude group: 'com.android.support'
+        exclude module: 'appcompat-v7'
+        exclude module: 'support-v4'
+    }
+    // Ethereum client
+    implementation "org.web3j:core:4.6.0-android"
+
+    implementation "org.bitcoinj:bitcoinj-core:0.14.7"
+
+//    implementation group: 'com.trustwallet', name: 'wallet-core', version: '2.6.3'
+    implementation "com.trustwallet:wallet-core:2.6.3"
+
+    // Http client
+    implementation "com.squareup.retrofit2:retrofit:2.5.0"
+    implementation "com.squareup.retrofit2:converter-gson:2.5.0"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:2.5.0"
+    implementation "com.squareup.okhttp3:okhttp:4.9.0"
+    implementation "com.google.code.gson:gson:2.8.6"
+    implementation "com.squareup.picasso:picasso:2.71828"
+    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.3.1'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+
+    // ReactiveX
+    implementation "io.reactivex.rxjava2:rxjava:2.2.10"
+    implementation "io.reactivex.rxjava2:rxandroid:2.1.1"
+
+
+    implementation 'org.slf4j:slf4j-nop:1.7.25'
+
+    //biometric
+    implementation 'androidx.biometric:biometric:1.1.0'
+
 }
+apply plugin: 'com.google.gms.google-services'

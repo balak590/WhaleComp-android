@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "299412416884",
+    "project_id": "whalecomp-cf678",
+    "storage_bucket": "whalecomp-cf678.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:299412416884:android:02237b5003fbd24ea0a421",
+        "android_client_info": {
+          "package_name": "com.klhk.whalecomp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "299412416884-up1lggapqqoor1kmld17b1be2i778af0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDBfo35aoTeG_5abhbg_wkKfj5zTz4Eb2M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "299412416884-up1lggapqqoor1kmld17b1be2i778af0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

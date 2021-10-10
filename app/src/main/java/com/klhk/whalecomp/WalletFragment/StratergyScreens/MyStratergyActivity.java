@@ -1,5 +1,7 @@
 package com.klhk.whalecomp.WalletFragment.StratergyScreens;
 
+import static com.klhk.whalecomp.utilities.Constants.roundButtonPressed;
+
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,14 +11,16 @@ import android.graphics.Shader;
 import android.os.Bundle;
 import android.text.TextPaint;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.github.sshadkany.neo;
 import com.klhk.whalecomp.R;
 
 public class MyStratergyActivity extends AppCompatActivity {
-    ImageView backButton, pick_chain;
+    ImageView  pick_chain;
     RelativeLayout connectButton;
 
     @Override
@@ -26,7 +30,6 @@ public class MyStratergyActivity extends AppCompatActivity {
         connectButton = findViewById(R.id.connectButton);
         pick_chain = findViewById(R.id.pick_chain);
 
-        backButton = findViewById(R.id.backButton);
 
         TextView amountText = findViewById(R.id.amountText);
 
@@ -40,54 +43,9 @@ public class MyStratergyActivity extends AppCompatActivity {
                 }, null, Shader.TileMode.CLAMP);
         amountText.getPaint().setShader(textShader);
 
-
-        backButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                onBackPressed();
-            }
-        });
-
-        connectButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                AlertDialog.Builder builder = new AlertDialog.Builder(MyStratergyActivity.this,R.style.CustomDialog);
-
-                View v = getLayoutInflater().inflate(R.layout.pick_wallet,null);
-                ImageView closeButton = v.findViewById(R.id.closeButton);
-                builder.setCancelable(false);
-
-                builder.setView(v);
-                AlertDialog dialog = builder.show();
-
-                closeButton.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        dialog.cancel();
-                    }
-                });
-            }
-        });
-
-        pick_chain.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                AlertDialog.Builder builder = new AlertDialog.Builder(MyStratergyActivity.this,R.style.CustomDialog);
-
-                View v = getLayoutInflater().inflate(R.layout.pick_chain,null);
-                ImageView closeButton = v.findViewById(R.id.closeButton);
-                builder.setCancelable(false);
-
-                builder.setView(v);
-                AlertDialog dialog = builder.show();
-
-                closeButton.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        dialog.cancel();
-                    }
-                });
-            }
-        });
+        neo backButton = findViewById(R.id.backButton);
+        ViewGroup viewGroupC1 = findViewById(R.id.backButton);
+        final ImageView imageviewC1 = (ImageView) viewGroupC1.getChildAt(0);
+        roundButtonPressed(backButton,imageviewC1,this);
     }
 }

@@ -1,15 +1,107 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.klhk.whalecomp">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.USE_BIOMETRIC" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
     <application
+        android:name=".utilities.AppController"
         android:allowBackup="true"
-        android:icon="@mipmap/whale_logo"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/whale_comp_logo"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/whale_logo_round"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/whale_comp_logo_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.WhaleComp">
-        <activity android:name=".WalletFragment.StratergyScreens.AutoCompoundActivity"></activity>
+        tools:replace="android:theme,android:icon,android:roundIcon"
+        android:theme="@style/Theme.WhaleComp"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".WalletFragment.StratergyScreens.StrategyStepsActivity"></activity>
+        <activity android:name=".WalletFragment.StratergyScreens.StrategyInfoActivity" />
+        <activity android:name=".SettingFragment.UpdateActivity" /> <!-- <service -->
+        <!-- android:name=".utilities.MyService" -->
+        <!-- android:enabled="true" -->
+        <!-- android:exported="true" -->
+        <!-- android:permission="android.permission.BIND_JOB_SERVICE"></service> -->
+        <service
+            android:name=".utilities.MyJobService"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+
+        <receiver
+            android:name=".utilities.service.Restarter"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="restartservice" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".utilities.service.CompounderService"
+            android:enabled="true" >
+        </service>
+
+        <activity android:name=".WhaleTrust.TxDetailActivity" />
+        <activity android:name=".WebBrowser.WebBrowserActivity" />
+        <activity android:name=".WhaleTrust.ScanActivity" />
+        <activity android:name=".WhaleTrust.NewTokenActivity" />
+        <activity android:name=".WhaleTrust.TxSuccessActivity" />
+        <activity android:name=".WhaleTrust.TxConfirmActivity" />
+        <activity android:name=".WhaleTrust.ReceiveFundsActivity" />
+        <activity android:name=".WhaleTrust.SwapWhaleTrustActivity" />
+        <activity android:name=".WhaleTrust.SendToAddressActivity" />
+        <activity android:name=".WhaleTrust.TokenDetailActivity" />
+        <activity android:name=".WhaleTrust.AddRemoveTokenActivity" />
+        <activity android:name=".WhaleTrust.ImportAddressActivity" />
+        <activity android:name=".WhaleTrust.PassPhraseVerifyActivity" />
+        <activity android:name=".WhaleTrust.PassPhraseActivity" />
+        <activity android:name=".WhaleTrust.CreateMnemonicActivity" />
+        <activity android:name=".SettingFragment.SocialMediaActivity" />
+        <activity android:name=".SettingFragment.ChangeLanguageActivity" />
+        <activity android:name=".SettingFragment.ChangeSmartChainActivity" />
+        <activity android:name=".SettingFragment.NotificationManagemntActivity" />
+        <activity android:name=".SettingFragment.AuthManagementActivity" />
+        <activity android:name=".CutomKeypad.CustomKeypadActivity" />
+        <activity android:name=".SettingFragment.PasswordSettingActivity" />
+        <activity android:name=".SettingFragment.DefaultTimeoutActivity" />
+        <activity android:name=".SettingFragment.DefaultSlippageActivity" />
+        <activity android:name=".SettingFragment.MnemonicPhraseActivity" />
+        <activity android:name=".SettingFragment.MnemonicDescActivity" />
+        <activity android:name=".SettingFragment.PickAddressActivity" />
+        <activity android:name=".SettingFragment.AccountQr" />
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="@string/notification_channel_id" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/whale_logo" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/black" />
+
+        <service
+            android:name=".MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity android:name=".AlertFragment.AlertSetupActivity" />
+        <activity android:name=".WalletFragment.StratergyScreens.AutoCompoundActivity" />
         <activity android:name=".WalletFragment.StratergyScreens.AutoFarmActivity" />
         <activity android:name=".WalletFragment.StratergyScreens.CompoundActivity" />
         <activity android:name=".WalletFragment.StratergyScreens.MyStratergyActivity" />
